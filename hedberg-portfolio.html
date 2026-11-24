@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Christoffer Hedberg — Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Direction D — Data Canvas: light, plotted, evidence-forward. Single light theme by choice. */
+:root{
+  --bg:#F2F7FA; --surface:#FFFFFF; --line:#D5E3EB; --fg:#0E2A3A; --muted:#3D5668; --dim:#6B8292;
+  --accent:#0E8C9C;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --body:"IBM Plex Sans",-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--fg);
+  font-family:var(--body);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:0 64px;
+}
+.wrap{max-width:880px;margin:0 auto}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+a:hover,a:focus-visible{border-bottom-color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header.hero{display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap;padding-block:56px 10px}
+.hero-text{flex:1 1 420px;min-width:0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:500}
+h1{font-weight:700;font-size:clamp(34px,6vw,52px);line-height:1.05;margin:10px 0 14px;letter-spacing:-0.02em;text-wrap:balance}
+.lede{font-size:18px;max-width:62ch;margin:0 0 18px;color:var(--muted)}
+.contact{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;font-family:var(--mono);font-size:13px;color:var(--dim)}
+.contact .dot{color:var(--line)}
+.contact button{font-family:var(--mono);font-size:12px;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:999px;padding:3px 10px;cursor:pointer}
+.contact button:hover{border-color:var(--accent);color:var(--accent)}
+.headshot{width:128px;height:128px;object-fit:cover;border-radius:12px;border:1px solid var(--line);flex:0 0 auto}
+.redaction{font-size:13px;color:var(--dim);margin-top:14px;max-width:60ch}
+.timeline{width:100%;height:auto;display:block;margin:6px 0 10px}
+section.case{padding-block:44px;border-top:1px solid var(--line)}
+.case-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.case-idx{font-family:var(--mono);font-size:11px;color:var(--dim)}
+.case h2{font-weight:600;font-size:clamp(24px,3.6vw,30px);line-height:1.15;margin:8px 0 18px;text-wrap:balance}
+dl.pao{display:grid;gap:14px 24px;grid-template-columns:110px minmax(0,1fr);margin:0 0 20px}
+dl.pao dt{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);padding-top:3px}
+dl.pao dd{margin:0;max-width:68ch;color:var(--muted)}
+@media (max-width:560px){dl.pao{grid-template-columns:1fr}dl.pao dt{padding-top:6px}}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:0 0 22px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:2px}
+.tile b{font-family:var(--mono);font-weight:500;font-size:24px;color:var(--accent);font-variant-numeric:tabular-nums}
+.tile span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+figure{margin:0 0 20px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px}
+figure img{max-width:100%;display:block;border-radius:8px}
+figcaption{font-size:13px;color:var(--dim);padding:10px 4px 2px;max-width:75ch}
+.fig-row{display:grid;gap:16px}
+section.more{padding-block:44px;border-top:1px solid var(--line)}
+section.more h2{font-weight:600;font-size:24px;margin:8px 0 16px}
+ul.plain{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+ul.plain li{padding-left:18px;position:relative;max-width:75ch;color:var(--muted)}
+ul.plain li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+footer{border-top:1px solid var(--line);padding-block:28px;color:var(--dim);font-size:14px;display:flex;flex-wrap:wrap;gap:8px 16px}
+nav.versions{font-family:var(--mono);font-size:12px;color:var(--dim);padding-top:16px;display:flex;flex-wrap:wrap;gap:8px 14px;width:100%}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- PORTFOLIO-CONTENT:START -->
+<header class="hero">
+  <div class="hero-text">
+    <span class="eyebrow">Portfolio</span>
+    <h1>Christoffer Hedberg</h1>
+    <p class="lede">Product builder across AI, data &amp; analytics, visualizations, and design systems. I turn complex problems into production-ready tools, systems, and experiences.</p>
+    <div class="contact">
+      <span>Örnsköldsvik, Sweden</span><span class="dot">·</span>
+      <span id="email">chrca166@gmail.com</span>
+      <button id="copyEmail" type="button">copy</button><span class="dot">·</span>
+      <a href="https://www.linkedin.com/in/christoffer-hedberg-1782ba107/">LinkedIn</a>
+    </div>
+    <p class="redaction">Imagery below comes from mostly from internal tools and dashboards; sensitive figures are redacted in the screenshots.</p>
+  </div>
+  <img class="headshot" src="images/christoffer-hedberg.jpg" alt="Portrait of Christoffer Hedberg">
+</header>
+
+<svg class="timeline" viewBox="0 0 880 130" role="img" aria-label="Career timeline from 2011 · Visualization Engineer to 2026 · Principal Product Designer">
+  <line x1="24" y1="100" x2="856" y2="100" stroke="#C6D8E2" stroke-width="1"></line>
+  <polyline points="40,92 150,80 260,86 370,62 480,48 590,52 700,28 820,20" fill="none" stroke="#0E8C9C" stroke-width="2.5" stroke-linecap="round"></polyline>
+  <circle cx="40" cy="92" r="5" fill="#0E2A3A"></circle>
+  <circle cx="150" cy="80" r="5" fill="#0E2A3A"></circle>
+  <circle cx="260" cy="86" r="5" fill="#3D5668"></circle>
+  <circle cx="370" cy="62" r="5" fill="#3D5668"></circle>
+  <circle cx="480" cy="48" r="6" fill="#0E8C9C"></circle>
+  <circle cx="590" cy="52" r="5" fill="#3D5668"></circle>
+  <circle cx="700" cy="28" r="6" fill="#0E8C9C"></circle>
+  <circle cx="820" cy="20" r="7" fill="#0E8C9C"></circle>
+  <text x="34" y="120" font-family="IBM Plex Mono, monospace" font-size="11" fill="#6B8292">2011 · Visualization Engineer</text>
+  <text x="856" y="120" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="11" fill="#6B8292">2026 · Principal Product Designer</text>
+</svg>
+
+<section class="case" id="qlik-for-vscode">
+  <div class="case-head"><span class="eyebrow">2025 – 2026 · Developer experience</span><span class="case-idx">VS Code extension</span></div>
+  <h2>Qlik for VS Code — a Qlik Cloud extension built for developers</h2>
+  <dl class="pao">
+    <div style="display:contents"><dt>Problem</dt><dd>Qlik developers needed a more developer-friendly environment for working with Qlik Cloud resources.</dd></div>
+    <div style="display:contents"><dt>Approach</dt><dd>Envisioned, designed and co-built <a href="https://marketplace.visualstudio.com/items?itemName=qliktechinc.qlik-code">Qlik for VS Code</a>, for working with Qlik Cloud resources in a more developer native-way, enabling better AI integration, version handling, and conflict management that the modern-day developer expects.</dd></div>
+    <div style="display:contents"><dt>Outcome</dt><dd>Qliks first official VS Code extension live in the VS Code Marketplace, with around 1,000 downloads in its first month, overwhelming praise from customers, and a five-star rating.</dd></div>
+  </dl>
+  <div class="tiles"><div class="tile"><b>5 ★</b><span>Marketplace rating</span></div><div class="tile"><b>~1,000</b><span>downloads · first month</span></div></div>
+  <figure><img src="images/vscode-flow.png" loading="lazy" alt="Figma flow of the Qlik VS Code extension OAuth login, annotated ready for development"><figcaption>OAuth sign-in flow designed in Figma for the shipped Qlik for VS Code extension.</figcaption></figure>
+</section>
+
+<section class="case">
+  <div class="case-head"><span class="eyebrow">2024 – 2026 · Consistency &amp; efficiency</span><span class="case-idx">Design System</span></div>
+  <h2>Sprout — Qliks enterprise-wide design system</h2>
+  <dl class="pao">
+    <div style="display:contents"><dt>Problem</dt><dd>Company grew quickly, both organically and inorganically, experiences started drifting, manual reviews became overwhelming, no source of truth for right and wrong for our experiences.</dd></div>
+    <div style="display:contents"><dt>Approach</dt><dd>Managed, co-designed and co-built <a href="https://github.com/qlik-oss/sprout">Sprout</a> as a true enterprise-ready, modern design system for the AI era from the ground up in a team of three. Built the framework for efficiently building out and maintaining a single source of truth for the user experiences across designers and developers. Architected a multi-layered token architecture supporting OEM theming requirements. Built tooling to keep Figma, code, and documentation in sync through automated pipelines. Designed and built code and design linters, documentation compilers, and a governance crawler giving us the ability to track adoption and adherence across hundreds of frontend repositories and Figma files down to the value. Sponsored early research for agentic tooling such as skills and a MCP server specific to our design system.</dd></div>
+    <div style="display:contents"><dt>Outcome</dt><dd>Improved accessibility, user experience, and consistency for new UI development as well as improved efficiency and satisfactions across our internal designers and developers. Unlocked the delivery of <a href="https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/LoadData/use-data-load-editor.htm#:~:text=applications%20and%20scripts.-,Dark%20mode,-With%20Dark%20mode">Qliks first ever dark mode feature</a> and OEM-grade theming across the platform.</dd></div>
+  </dl>
+  <div class="tiles"><div class="tile"><b>200+</b><span>design tokens</span></div><div class="tile"><b>50+</b><span>UI components</span></div><div class="tile"><b>100+</b><span>frontend repositories adopted</span></div><div class="tile"><b>1</b><span>source of truth</span></div></div>
+  <figure><img src="images/sprout-figma-linter-handover.png" loading="lazy" alt="Sprout design linter dialog in Figma next to the UI dev handover summary widget showing token usage, non-token fills and a component inventory"><figcaption>Sprout tooling in Figma: the design linter flags and fixes non-token styles; the handover widget gives developers token usage, component inventory, and an estimated build time per design.</figcaption></figure>
+</section>
+
+<section class="case">
+  <div class="case-head"><span class="eyebrow">2025 – 2026 · AI platform</span><span class="case-idx">Context layer &amp; semantic layer</span></div>
+  <h2>Designing Qlik for the AI era: the context &amp; semantic layers</h2>
+  <dl class="pao">
+    <div style="display:contents"><dt>Problem</dt><dd>AI agents runs inefficiently and inaccurate in large systems where context is missing, hard to find, or ambigious.</dd></div>
+    <div style="display:contents"><dt>Approach</dt><dd>Designed Qliks platform ontology — a typed knowledge graph of every resource type and their relationships in the Qlik platform — as the foundation for the next generation of Qliks context &amp; semantic layer that AI agents use to improve their accuracy and efficiency.</dd></div>
+    <div style="display:contents"><dt>Outcome</dt><dd>A shared semantic model for agents and humans, making platform context available in a consistent, typed form.</dd></div>
+  </dl>
+  <figure><img src="images/platform-ontology.png" loading="lazy" alt="Knowledge graph explorer showing typed Qlik resources such as chart, dimension, measure and field with their relationships"><figcaption>The platform ontology explorer (2026): typed resources — chart, dimension, measure, field — with their relationships, the context layer an agent reasons over.</figcaption></figure>
+</section>
+
+<section class="case">
+  <div class="case-head"><span class="eyebrow">2025 · Data governance</span><span class="case-idx">Platform catalog</span></div>
+  <h2>Design Atlas — mapping the platform itself</h2>
+  <dl class="pao">
+    <div style="display:contents"><dt>Problem</dt><dd>Our platform grew quickly, nobody could anymore themselves keep track of it all — which UIs, resource types, and user actions already existed, what they could do and was for, who owns what, and which are drifting. Without an inventory and clear ownership we were rebuilding existing functionality, introduced inconsistencies, ignored problem areas, and simply misunderstood concepts.</dd></div>
+    <div style="display:contents"><dt>Approach</dt><dd>Created the Design Atlas, a product-governance tool that defines, collects, and visualizes information about the Qlik platform: a browsable breakdown of every service, client, and tool, cross-linked with object types and user actions, plus governance views tracking definition coverage — user actions, sketches, demos, and responsible team per UI.</dd></div>
+    <div style="display:contents"><dt>Outcome</dt><dd>A shared interactive map of the platform surface with visible ownership and coverage, and the catalog thinking that fed directly into the platform related work below, hosted on our internal developer portal and fed with data from multiple data sources.</dd></div>
+  </dl>
+  <p class="redaction">Images show sketch versions of Design Atlas; the real platform data is company-sensitive and cannot be shared.</p>
+  <figure><img src="images/atlas-overview.png" loading="lazy" alt="Design Atlas overview combining the platform UI breakdown, governance coverage, and a UI detail page with telemetry"><figcaption>Design Atlas at a glance: the platform UI breakdown, governance coverage, and a UI detail with telemetry.</figcaption></figure>
+</section>
+
+<section class="case">
+  <div class="case-head"><span class="eyebrow">2024 – 2026 · Ways-of-working</span><span class="case-idx">Design operations</span></div>
+  <h2>Making design quality measurable</h2>
+  <dl class="pao">
+    <div style="display:contents"><dt>Problem</dt><dd>Design quality was argued in reviews but never tracked. Leadership had no way to see whether consistency, accessibility, or user frustration moved.</dd></div>
+    <div style="display:contents"><dt>Approach</dt><dd>Built the organization&#x27;s design quality metrics from product analytics: user time and activity, design-system adherence crawled from the codebase (Sprout vs legacy component ratio, token-compliant styling, hardcoded colors), accessibility, user frustration, and performance. Designed the metrics, integrated the data, automated the updates, built the dashboards, and promoted the idea to stakeholders.</dd></div>
+    <div style="display:contents"><dt>Outcome</dt><dd>Design quality became transparent: helping prioritize the roadmap, discover areas needing attention, and link product updates to changes in behaviours.</dd></div>
+  </dl>
+  <div class="fig-row">
+    <figure><img src="images/design-system-adherence.png" loading="lazy" alt="Design system adherence dashboard with component ratio, styling adoption ratio and hardcoded color tracking over time"><figcaption>Adherence dashboard: component ratio, token-compliant styling adoption, and hardcoded colors, tracked over time and per repository.</figcaption></figure>
+    <figure><img src="images/frustration-index.png" loading="lazy" alt="Frustration index dashboard with methodology, trend over time, per-page scatter and opportunity ranking"><figcaption>The Frustration index: four telemetry signals weighted into one metric, scattered per page and combined with exposure to rank improvement opportunities.</figcaption></figure>
+  </div>
+</section>
+
+<section class="case">
+  <div class="case-head"><span class="eyebrow">2023-2026 · Doing the right things</span><span class="case-idx">Product Discovery</span></div>
+  <h2>Product discovery and prioritization through opportunity solution trees</h2>
+  <dl class="pao">
+    <div style="display:contents"><dt>Problem</dt><dd>Product teams needed a structured way to link and untangle relationships between customer evidence and meaningful opportunities, solutions, and experiments.</dd></div>
+    <div style="display:contents"><dt>Approach</dt><dd>Untangled some of the most complicated and promising solution areas into opportunity solution trees, connecting ideas from impact to evidence-weighted opportunities, solutions, hypotheses, and experiments. Built Qrossview, an internal OST method and tool, so teams could apply the same discovery process themselves.</dd></div>
+    <div style="display:contents"><dt>Outcome</dt><dd>A repeatable product-discovery practice and tool (VS Code extension) that connects roadmap bets to customer evidence and gives teams a shared way to test what to build next.</dd></div>
+  </dl>
+  <figure><img src="images/nps-ost-redacted.jpg" loading="lazy" alt="Blurred opportunity solution tree mapping NPS impact through strategies, weighted opportunities, solutions, hypotheses and experiments"><figcaption>The 2023 NPS opportunity solution tree (contents redacted): weighted opportunities branch into solutions, each carrying an explicit hypothesis, down to a runnable experiment.</figcaption></figure>
+</section>
+
+<section class="more">
+  <span class="eyebrow">Also</span>
+  <h2>Beyond the case studies</h2>
+  <div class="tiles"><div class="tile"><b>$350K</b><span>est. savings 2023</span></div><div class="tile"><b>1</b><span>patent</span></div><div class="tile"><b>15</b><span>years in data and analytics</span></div></div>
+  <ul class="plain"><li>Led a cloud cost-saving initiative on app reloads — estimated <strong>$350K savings for 2023</strong> at a 6% month-over-month savings rate.</li><li>Inventor on <a href="https://patents.justia.com/patent/11093473">US 11,093,473 / EP 3561688 A1</a> — hierarchical tree data structures (Qlik).</li><li>Earlier at Qlik: Software Architect leading the AngularJS → React modernization and technical responsible for Qlik&#x27;s visualizations; Product Area Architect for Sense Analytics.</li><li>Member of several leaderhips teams: Design Leadership Team (2023-2026), Quality Leadership Team (2024-2025), and Qlik Architecture Council (2015-2018).</li><li>Leader of several multi-diciplinary teams: Design Strategy &amp; Governance team (2023-2024), Design System Advisory Group (2025-2026), and Qlik Web Client Architecture Council (2015-2018).</li><li>Started in visualization research at NComVA (2011–2013).</li><li>M.Sc. in Media Technology, Linköping University (2006–2011).</li></ul>
+</section>
+
+<footer>
+  <span>Christoffer Hedberg · Örnsköldsvik, Sweden</span>
+  <span>chrca166@gmail.com</span>
+  <a href="https://www.linkedin.com/in/christoffer-hedberg-1782ba107/">LinkedIn</a>
+  <span>CV available on request.</span>
+
+</footer>
+<!-- PORTFOLIO-CONTENT:END -->
+</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('copyEmail');
+  if(!btn) return;
+  btn.addEventListener('click',function(){
+    var text=document.getElementById('email').textContent;
+    function fallback(){
+      var r=document.createRange(); r.selectNodeContents(document.getElementById('email'));
+      var s=getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent='select + copy';
+    }
+    try{
+      navigator.clipboard.writeText(text).then(function(){
+        btn.textContent='copied';
+        setTimeout(function(){btn.textContent='copy';},1500);
+      },fallback);
+    }catch(e){fallback();}
+  });
+})();
+</script>
+</body>
+</html>
